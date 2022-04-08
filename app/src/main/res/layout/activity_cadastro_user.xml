@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:paddingLeft="32dp"
+    android:paddingTop="30dp"
+    android:paddingRight="32dp"
+    android:background="@color/cinza_laro"
+    tools:context=".cadastro.CadastroUser">
+
+    <ImageView
+        android:id="@+id/imageView_CadastrarUser_Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="137dp"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+
+        android:id="@+id/textView_CadastrarUser_Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Pay Coin"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edittext_CadastrarUser_Nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:autofillHints="nome"
+        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/cinza_escuro"
+        android:textColorLink="@color/purple_700" />
+
+    <EditText
+        android:id="@+id/editText_CadastrarUser_Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textWebEmailAddress"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/cinza_escuro"
+        android:textColorLink="@color/purple_700" />
+
+    <EditText
+        android:id="@+id/editText_CadastrarUser_Senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/cinza_escuro"
+        android:textColorLink="@color/purple_700" />
+
+
+    <EditText
+        android:id="@+id/editText_CadastrarUser_CPF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="CPF"
+        android:inputType=""
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/cinza_escuro"
+        android:textColorLink="@color/purple_700" />
+
+    <EditText
+        android:id="@+id/editText_CadastrarUser_ContaBancaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="Conta Bancária"
+        android:inputType="none"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/cinza_escuro"
+        android:textColorLink="@color/purple_700" />
+
+    <EditText
+        android:id="@+id/editText_CadastrarUser_ValorInicial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:hint="Valor Inicial"
+        android:inputType="none"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/cinza_escuro"
+        android:textColorLink="@color/purple_700" />
+
+    <Button
+        android:id="@+id/button_CadastrarUser_Editar"
+        android:layout_width="104dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="120dp"
+        android:backgroundTint="@color/cinza_escuro"
+        android:minHeight="48dp"
+        android:text="Editar"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/button_CadastrarUser_Salvar"
+        android:layout_width="104dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="120dp"
+        android:backgroundTint="@color/cinza_escuro"
+        android:minHeight="48dp"
+        android:text="Salvar"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/button_CadastrarUser_Cancelar"
+        android:layout_width="104dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="120dp"
+        android:backgroundTint="@color/cinza_escuro"
+        android:minHeight="48dp"
+        android:text="Cancelar"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic" />
+
+
+</LinearLayout>

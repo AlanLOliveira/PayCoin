@@ -3,8 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_screen.xml" value="0.27803521779425394" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/drawable/baseline_person_add_alt_20.xml" value="0.1" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/drawable/botao_customizado.xml" value="0.2115" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_cadastro_user.xml" value="0.25" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_cod_barras.xml" value="0.1" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_cod_barras_digit.xml" value="0.25" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_dados_transacao.xml" value="0.22" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_dados_transacao2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_dados_transacao3.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_dados_transferencia.xml" value="0.25" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_depositar.xml" value="0.25" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_dig_cod_barras.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_historico.xml" value="0.33" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_pagar.xml" value="0.25" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_perfil_user.xml" value="0.25" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_qrcode.xml" value="0.2" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_recupera_senha.xml" value="0.25" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_screen.xml" value="0.1" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_tela_inicial.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_tela_inicial2.xml" value="0.24088748019017434" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/activity_transacao_concluida.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/custombotao.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/fragment_home.xml" value="0.15219976218787157" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/fragment_logoff.xml" value="0.25" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/fragment_suporte.xml" value="0.15219976218787157" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/layout/spinner_estilo.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/menu/barra_navegacao.xml" value="0.1" />
+        <entry key="..\:/Users/kid_a/AndroidStudioProjects/PayCoin/app/src/main/res/menu/botoes_menu.xml" value="0.15537059056678557" />
       </map>
     </option>
   </component>

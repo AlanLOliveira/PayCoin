@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_Suporte"
+        android:title="Suporte"
+        android:icon="@drawable/ic_baseline_support_agent_24"/>
+
+    <item
+        android:id="@+id/nav_Logoff"
+        android:title="Logoff"
+        android:icon="@drawable/ic_baseline_logout_24" />
+</menu>

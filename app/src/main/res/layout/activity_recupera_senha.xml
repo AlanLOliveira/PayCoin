@@ -1,0 +1,112 @@
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:background="@color/cinza_laro"
+        tools:context=".cadastro.MainActivity">
+
+        <TextView
+            android:id="@+id/textView_RecuperaSenha_MensagemRecuperacao"
+            android:layout_width="386dp"
+            android:layout_height="97dp"
+            android:gravity="center"
+            android:text="Para recuperar a sua senha, informe seu endereço
+            de email que nós enviaremos um link para a alteração da senha."
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nome2"
+            app:layout_constraintVertical_bias="0.419" />
+
+        <ImageView
+            android:id="@+id/logo7"
+            android:layout_width="wrap_content"
+            android:layout_height="137dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.043" />
+
+
+        <TextView
+
+            android:id="@+id/nome2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay Coin"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.219" />
+
+        <TextView
+
+            android:id="@+id/textview_Recuperar1"
+            android:layout_width="386dp"
+            android:layout_height="97dp"
+            android:gravity="center"
+            android:hint="Recuperação de Senha e Usuário"
+            android:textSize="25dp"
+            android:textStyle="italic|bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView_RecuperaSenha_MensagemRecuperacao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nome2"
+            app:layout_constraintVertical_bias="0.463" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_RecuperaSenha_EnviarTelaLogin"
+            android:layout_width="103dp"
+            android:layout_height="53dp"
+            android:background="#666666"
+            android:text="Enviar"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_RecuperarSenha_Email"
+            app:layout_constraintVertical_bias="0.285" />
+
+        <EditText
+            android:id="@+id/editText_RecuperarSenha_Email"
+            android:layout_width="322dp"
+            android:layout_height="47dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawablePadding="6dp"
+            android:ems="12"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_RecuperaSenha_MensagemRecuperacao"
+            app:layout_constraintVertical_bias="0.111" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

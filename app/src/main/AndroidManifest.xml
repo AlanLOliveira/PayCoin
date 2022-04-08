@@ -10,7 +10,46 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PayCoin">
         <activity
-            android:name=".MainActivity"
+            android:name=".DadosTransferencia"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperaSenha"
+            android:exported="false" />
+        <activity
+            android:name=".pagar.QRCode"
+            android:exported="false" />
+        <activity
+            android:name=".pagar.CodBarrasDigit"
+            android:exported="false" />
+        <activity
+            android:name=".pagar.TransacaoConcluida"
+            android:exported="false" />
+        <activity
+            android:name=".pagar.DadosTransacao"
+            android:exported="false" />
+        <activity
+            android:name=".pagar.CodBarras"
+            android:exported="false" />
+        <activity
+            android:name=".PerfilUser"
+            android:exported="false" />
+        <activity
+            android:name=".Historico"
+            android:exported="false" />
+        <activity
+            android:name=".pagar.Pagar"
+            android:exported="false" />
+        <activity
+            android:name=".deposito.Depositar"
+            android:exported="false" />
+        <activity
+            android:name=".cadastro.CadastroUser"
+            android:exported="false" />
+        <activity
+            android:name=".TelaInicial"
+            android:exported="false" />
+        <activity
+            android:name=".cadastro.MainActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"

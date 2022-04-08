@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDCDC"
+    tools:context=".pagar.Pagar">
+
+    <TextView
+
+        android:id="@+id/textView_CodBarras_Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay Coin"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Pagar_EscolhaOpcoes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Pagar_Logo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Pagar_TelaPrincipal"
+        android:layout_width="27dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="40dp"
+        android:background="#DCDCDC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Pagar_EscaneieQRCode"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <Button
+        android:id="@+id/button_Pagar_EscaneieQRCode"
+        android:layout_width="281dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#cacaca"
+        android:drawableLeft="@drawable/qrcode"
+        android:text="Escaneie o QR Code"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Pagar_DigiteCodigoBarras"
+        app:layout_constraintVertical_bias="0.119" />
+
+    <Button
+        android:id="@+id/button_Pagar_EscaneieCodigoBarras"
+        android:layout_width="281dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#cacaca"
+        android:drawableLeft="@drawable/ic_baseline_transform_24"
+        android:text="Depósitos e Transferências"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Pagar_Logo"
+        app:layout_constraintVertical_bias="0.264" />
+
+    <Button
+        android:id="@+id/button_Pagar_DigiteCodigoBarras"
+        android:layout_width="281dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#cacaca"
+        android:drawableLeft="@drawable/codigobarrasok"
+        android:text="Digite o Código de Barras"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Pagar_EscaneieCodigoBarras"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <ImageView
+        android:id="@+id/imageView_Pagar_Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="137dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView_Pagar_EscolhaOpcoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:textSize="20dp"
+        android:text="Escolha o método de pagamento"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_Pagar_EscaneieCodigoBarras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_Pagar_Logo"
+        app:layout_constraintVertical_bias="0.409" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
