@@ -89,10 +89,7 @@ public class Usuario implements Cloneable {
         this.cpf = c;
     }
 
-    public String getContaBancaria() {
-
-        return this.contabancaria;
-    }
+    public String getContaBancaria() {return this.contabancaria;}
 
     public void setContaBancaria(String cb){
         this.contabancaria = cb;
@@ -105,7 +102,6 @@ public class Usuario implements Cloneable {
     public void setValorInicial(String vi){
         this.valorinicial = vi;
     }
-
 
 
     @Override

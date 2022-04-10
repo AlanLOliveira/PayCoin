@@ -7,8 +7,7 @@
         <item>Dolar</item>
         <item>Real</item>
         <item>Bitcoin</item>
-        <item>Pesos</item>
-        <item>Euro</item>
+        <item>Euros</item>
     </string-array>
 
     <string-array name="Formas_de_depositos">
@@ -24,19 +23,28 @@
         <item>Itau</item>
         <item>Bradesco</item>
         <item>Santander</item>
-        <item>Brasil</item>
         <item>Virtual</item>
     </string-array>
 
 
 <string-array name="Cotacao">
+    <item>Selecione</item>
     <item>Todos</item>
     <item>StarCâmbio</item>
     <item>SKyCâmbio</item>
     <item>DayCâmbio</item>
     <item>FasterCâmbio</item>
 
-</string-array>
+    </string-array>
+
+    <string-array name="Estados">
+        <item>Selecione</item>
+        <item>Todos</item>
+    <item>São Paulo</item>
+    <item>Rio de Janeiro</item>
+    <item>Brasilia</item>
+
+    </string-array>
 
 
 

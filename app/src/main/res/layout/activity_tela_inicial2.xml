@@ -63,7 +63,7 @@
         app:layout_constraintVertical_bias="0.08" />
 
     <TextView
-        android:id="@+id/saldo"
+        android:id="@+id/textView_TelaInicial_Saldo"
         android:layout_width="214dp"
         android:layout_height="47dp"
         android:text="R$0.00 "
@@ -81,7 +81,7 @@
         android:id="@+id/imageView3"
         android:layout_width="51dp"
         android:layout_height="35dp"
-        app:layout_constraintBottom_toTopOf="@+id/saldo"
+        app:layout_constraintBottom_toTopOf="@+id/textView_TelaInicial_Saldo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toEndOf="@+id/saldoDisp"
@@ -97,11 +97,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/saldo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_TelaInicial_Saldo"
         app:layout_constraintVertical_bias="0.99">
 
         <Button
-            android:id="@+id/pagar"
+            android:id="@+id/button_Telainicial_Pagar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
@@ -138,7 +138,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/user"
+            android:id="@+id/button_TelaInicial_Perfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"

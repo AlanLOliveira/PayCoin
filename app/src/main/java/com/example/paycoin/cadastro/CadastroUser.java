@@ -30,6 +30,14 @@ public class CadastroUser extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro_user);
         getSupportActionBar().hide();
 
+//        BancoSQLite db2 = new BancoSQLite(this);
+//        Usuario perfiluser = db2.selecionarId("1");
+//        edit_cadastraruser_nome.setHint(perfiluser.getNome());
+
+
+
+
+
         ids_cadastro();
 
 

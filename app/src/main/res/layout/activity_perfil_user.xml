@@ -26,8 +26,8 @@
         android:textSize="30dp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editText_perfil_inserirNome"
+    <TextView
+        android:id="@+id/textView_perfil_Nome"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginBottom="4dp"
@@ -36,15 +36,14 @@
         android:drawablePadding="6dp"
         android:ems="5"
         android:hint="Nome"
-        android:inputType="textPersonName"
         android:textColor="@color/black"
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/cinza_escuro"
         android:textColorLink="@color/purple_700"
         android:textSize="12sp" />
 
-    <EditText
-        android:id="@+id/editText_perfil_inserirEmail"
+    <TextView
+        android:id="@+id/textView_perfil_Email"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginBottom="4dp"
@@ -59,8 +58,8 @@
         android:textColorLink="@color/purple_700"
         android:textSize="12sp" />
 
-    <EditText
-        android:id="@+id/editText_perfil_inserirSenha"
+    <TextView
+        android:id="@+id/textView_perfil_Senha"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginBottom="4dp"
@@ -76,24 +75,8 @@
         android:textSize="12sp" />
 
 
-    <EditText
-        android:id="@+id/editText_perfil_inserirDadosBancarios"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginBottom="4dp"
-        android:drawableLeft="@drawable/ic_baseline_account_balance_24"
-        android:drawablePadding="6dp"
-        android:ems="5"
-        android:hint="Dados bancarios"
-        android:inputType="none"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/purple_500"
-        android:textColorHint="@color/cinza_escuro"
-        android:textColorLink="@color/purple_700"
-        android:textSize="12sp" />
-
-    <EditText
-        android:id="@+id/editText_perfil_inserirCPF"
+    <TextView
+        android:id="@+id/textView_perfil_CPF"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginBottom="4dp"
@@ -108,8 +91,24 @@
         android:textColorLink="@color/purple_700"
         android:textSize="12sp" />
 
-    <EditText
-        android:id="@+id/editText_perfil_inserirValorInicial"
+    <TextView
+        android:id="@+id/textView_perfil_DadosBancarios"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="4dp"
+        android:drawableLeft="@drawable/ic_baseline_account_balance_24"
+        android:drawablePadding="6dp"
+        android:ems="5"
+        android:hint="Dados bancarios"
+        android:inputType="none"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/purple_500"
+        android:textColorHint="@color/cinza_escuro"
+        android:textColorLink="@color/purple_700"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView_perfil_ValorInicial"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginBottom="4dp"

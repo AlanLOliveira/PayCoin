@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.example.paycoin.cadastro.CadastroUser;
 import com.example.paycoin.pagar.Pagar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarItemView;
@@ -15,10 +18,13 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class TelaInicial extends AppCompatActivity {
 
-    Button clic_pagar;
-    Button clic_historico;
-    Button clic_user;
+    Button clic_telainicial_pagar;
+    Button clic_telainicial_historico;
+    Button clic_telainicial_perfil;
+    Button clic_telainicial_receber;
     BottomNavigationView botaonavegacao;
+
+
 
 
 
@@ -27,6 +33,7 @@ public class TelaInicial extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_inicial2);
         getSupportActionBar().hide();
+
 
         botaonavegacao = findViewById(R.id.bottom_Botao_Navegacao);
         getSupportFragmentManager().beginTransaction().replace(R.id.nav_Caixa_Navegacao, new Logoff()).commit();
@@ -49,11 +56,11 @@ public class TelaInicial extends AppCompatActivity {
         });
 
 
-        clic_pagar = findViewById(R.id.pagar);
-        clic_historico = findViewById(R.id.button_TelaInicial_Historico);
-        clic_user = findViewById(R.id.user);
+        clic_telainicial_pagar = findViewById(R.id.button_Telainicial_Pagar);
+        clic_telainicial_historico = findViewById(R.id.button_TelaInicial_Historico);
+        clic_telainicial_perfil = findViewById(R.id.button_TelaInicial_Perfil);
 
-        clic_pagar.setOnClickListener(new View.OnClickListener() {
+        clic_telainicial_pagar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent pag = new Intent(getApplicationContext(), Pagar.class);
@@ -61,7 +68,7 @@ public class TelaInicial extends AppCompatActivity {
             }
         });
 
-        clic_historico.setOnClickListener(new View.OnClickListener() {
+        clic_telainicial_historico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent hist = new Intent(getApplicationContext(), Historico.class);
@@ -69,6 +76,13 @@ public class TelaInicial extends AppCompatActivity {
             }
         });
 
+        clic_telainicial_perfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent pag = new Intent(getApplicationContext(), PerfilUser.class);
+                startActivity(pag);
+            }
+        });
 
 
 

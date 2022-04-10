@@ -101,6 +101,32 @@ public class BancoSQLite extends SQLiteOpenHelper {
             return null;
         }
 
+    public Usuario selecionarId(String id){
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.query(
+                TABELA,
+                new String[]{ID,NOME,LOGIN,SENHA,CPF,CONTABANCARIA,VALORINICIAL},
+                ID + " = ?",
+                new String[]{ String.valueOf(id)}, null, null, null, null);
+
+        if (cursor != null){
+            cursor.moveToFirst();
+
+            Usuario user = new Usuario(
+                    Integer.parseInt(cursor.getString(0)),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6));
+
+            return(Usuario) user.clone();
+        } else
+            return null;
+    }
+
 
 
     }

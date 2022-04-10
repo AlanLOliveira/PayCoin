@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1"
+    android:background="@color/cinza_laro"
     android:orientation="vertical"
     android:paddingLeft="32dp"
     android:paddingTop="30dp"
     android:paddingRight="32dp"
-    android:background="@color/cinza_laro"
     tools:context=".cadastro.CadastroUser">
 
     <ImageView
@@ -110,6 +110,7 @@
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/cinza_escuro"
         android:textColorLink="@color/purple_700" />
+
 
     <EditText
         android:id="@+id/editText_CadastrarUser_ValorInicial"

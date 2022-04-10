@@ -8,7 +8,7 @@
     tools:context=".deposito.Depositar">
 
     <ImageButton
-        android:id="@+id/imageButton_Deposito_VoltarInicial"
+        android:id="@+id/imageButton_Depositar_VoltarInicial"
         android:layout_width="19dp"
         android:layout_height="24dp"
         android:layout_marginBottom="40dp"
@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_Deposito_ConcluirTransação"
+        app:layout_constraintTop_toBottomOf="@+id/button_Deposito_ConcluirTransacao"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
@@ -55,7 +55,6 @@
         android:id="@+id/logo5"
         android:layout_width="wrap_content"
         android:layout_height="137dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -68,21 +67,22 @@
         android:id="@+id/linearLayout3"
         android:layout_width="256dp"
         android:layout_height="45dp"
-        android:layout_marginTop="48dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="0.175">
 
         <Spinner
 
-            android:id="@+id/spinner_Deposito_BancoInicial"
+            android:id="@+id/spinner_Deposito_BancoOrigem"
             android:layout_width="120dp"
             android:layout_height="25dp" />
 
         <Spinner
-            android:id="@+id/spinner_Deposito_TipoDeposito"
+            android:id="@+id/spinner_Depositar_TipoDeposito"
             android:layout_width="120dp"
             android:layout_height="25dp" />
 
@@ -146,10 +146,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="371dp"
-        android:layout_height="64dp"
+        android:layout_width="294dp"
+        android:layout_height="77dp"
         android:orientation="vertical"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.485"
@@ -158,14 +157,26 @@
         app:layout_constraintVertical_bias="0.03">
 
 
-        <TextView
-            android:id="@+id/textView_Deposito_BuscarRecebedor"
+        <EditText
+            android:id="@+id/editText_Depositar_DigitarRecebedor"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="wrap_content"
             android:gravity="left"
+            android:hint="Selecione o Recebedor"
             android:paddingLeft="6dp"
-            android:text="Selecione o Recebedor"
-            android:textColor="@color/black" />
+            android:textSize="15dp"
+
+            />
+
+        <Button
+            android:layout_width="53dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="6dp"
+            android:backgroundTint="@color/cinza_escuro"
+            android:text="Ok"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
 
     </LinearLayout>
 
@@ -200,13 +211,13 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        app:layout_constraintVertical_bias="0.106">
+        app:layout_constraintVertical_bias="0.0">
 
         <EditText
-            android:id="@+id/digitValor"
+            android:id="@+id/editText_Depositar_DigitarValor"
             android:layout_width="109dp"
             android:layout_height="45dp"
             android:gravity="center"
@@ -215,7 +226,7 @@
             android:textStyle="bold" />
 
         <ImageButton
-            android:id="@+id/imageButton_Deposito_ConverterMoeda"
+            android:id="@+id/imageButton_Depositar_ConverterMoeda"
             android:layout_width="wrap_content"
             android:layout_height="46dp"
             app:srcCompat="@drawable/conversaoooo" />
@@ -232,7 +243,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button_Deposito_ConcluirTransação"
+        android:id="@+id/button_Deposito_ConcluirTransacao"
         android:layout_width="145dp"
         android:layout_height="41dp"
         android:backgroundTint="@color/cinza_escuro"
@@ -243,8 +254,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
         app:layout_constraintVertical_bias="0.111" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

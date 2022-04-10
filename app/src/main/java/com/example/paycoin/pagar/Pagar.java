@@ -10,11 +10,12 @@ import android.widget.ImageButton;
 
 import com.example.paycoin.R;
 import com.example.paycoin.TelaInicial;
+import com.example.paycoin.deposito.Depositar;
 
 public class Pagar extends AppCompatActivity {
 
     ImageButton clic_voltar_telaprincipal;
-    Button clic_escanear_codigobarras;
+    Button clic_pagar_depositostransferencia;
     Button clic_digitar_codigobarras;
     Button clic_escanear_qrcode;
 
@@ -24,11 +25,11 @@ public class Pagar extends AppCompatActivity {
         setContentView(R.layout.activity_pagar);
         getSupportActionBar().hide();
 
-        clic_escanear_codigobarras = findViewById(R.id.button_Pagar_EscaneieCodigoBarras);
-        clic_escanear_codigobarras.setOnClickListener(new View.OnClickListener() {
+        clic_pagar_depositostransferencia = findViewById(R.id.button_Pagar_DepositosTransferencia);
+        clic_pagar_depositostransferencia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent scaner = new Intent(getApplicationContext(), CodBarras.class);
+                Intent scaner = new Intent(getApplicationContext(), Depositar.class);
                 startActivity(scaner);
             }
         });
