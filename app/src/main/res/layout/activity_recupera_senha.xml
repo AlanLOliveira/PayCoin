@@ -62,7 +62,7 @@
 
         <TextView
 
-            android:id="@+id/textview_Recuperar1"
+            android:id="@+id/textview_EnviarEmailRecuperacao"
             android:layout_width="386dp"
             android:layout_height="97dp"
             android:gravity="center"

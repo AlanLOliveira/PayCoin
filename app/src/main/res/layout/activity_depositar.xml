@@ -8,7 +8,7 @@
     tools:context=".deposito.Depositar">
 
     <ImageButton
-        android:id="@+id/imageButton_Depositar_VoltarInicial"
+        android:id="@+id/imageButton_Depositar_VoltarPagar"
         android:layout_width="19dp"
         android:layout_height="24dp"
         android:layout_marginBottom="40dp"
@@ -16,11 +16,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <TextView
 
-        android:id="@+id/textView_CodBarras_Titulo"
+        android:id="@+id/textView_Depositar_Titulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pay Coin"
@@ -49,7 +50,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.456" />
+        app:layout_constraintVertical_bias="0.446" />
 
     <ImageView
         android:id="@+id/logo5"
@@ -67,7 +68,6 @@
         android:id="@+id/editText_Depositar_DigitarRecebedor"
         android:layout_width="312dp"
         android:layout_height="41dp"
-
         android:hint="Selecione o Recebedor"
         android:paddingLeft="6dp"
         android:textSize="15dp"
@@ -100,7 +100,7 @@
             android:textSize="12dp" />
 
         <EditText
-            android:id="@+id/editText_CodBarrasDigitavel_Senha"
+            android:id="@+id/editText_Depositar_Senha"
             android:layout_width="167dp"
             android:layout_height="36dp"
             android:drawableStart="@drawable/ic_lock"
@@ -158,15 +158,15 @@
 
     <LinearLayout
         android:id="@+id/linearLayout8"
-        android:layout_width="254dp"
-        android:layout_height="54dp"
+        android:layout_width="263dp"
+        android:layout_height="52dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_Depositar_DigitarRecebedor"
-        app:layout_constraintVertical_bias="0.279">
+        app:layout_constraintVertical_bias="0.265">
 
         <EditText
             android:id="@+id/editText_Depositar_DigitarValor"
@@ -238,13 +238,13 @@
         android:id="@+id/linearLayout6"
         android:layout_width="315dp"
         android:layout_height="189dp"
+        android:layout_marginBottom="44dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton_Depositar_VoltarInicial"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton_Depositar_VoltarPagar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_CodBarras_Titulo"
-        app:layout_constraintVertical_bias="0.832">
+        app:layout_constraintTop_toBottomOf="@+id/textView_Depositar_Titulo"
+        app:layout_constraintVertical_bias="0.962">
 
         <TextView
             android:id="@+id/textView_Depositar_Recebedor"

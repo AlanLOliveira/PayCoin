@@ -17,16 +17,17 @@ import android.widget.Toast;
 import com.example.paycoin.DadosTransferencia;
 import com.example.paycoin.R;
 import com.example.paycoin.TelaInicial;
+import com.example.paycoin.pagar.Pagar;
 import com.example.paycoin.pagar.TransacaoConcluida;
 
 public class Depositar extends AppCompatActivity {
 
-    ImageButton imagebutton_depositar_convertermoeda,clic_deposito_voltartelainicial;
+    ImageButton imagebutton_depositar_convertermoeda,imagebutton_deposito_voltarpagar;
     Button button_deposito_concluirtransacao, button_depositar_confirmardados;
-    EditText edittxt_depositar_digitarrecebedor, edittxt_depositar_digitarvalor;
+    EditText edittxt_depositar_digitarrecebedor, edittxt_depositar_digitarvalor, edittxt_depositar_confirmarvalor;
     Spinner spinner_bancoorigem, spinner_tipodeposito, spinner_moedainicial, spinner_moedafinal;
     TextView txtv_depositar_valorfinal, txtv_depositar_recebedor,txtv_depositar_banco,
-            txtv_depositar_agenciaconta, txtv_depositar_confirmarvalor,
+            txtv_depositar_agenciaconta,
             txtv_depositar_datatransacao, txtv_depositar_tipodeposito;
 
 
@@ -56,7 +57,7 @@ public class Depositar extends AppCompatActivity {
        });
 
 
-        clic_deposito_voltartelainicial.setOnClickListener(evt -> proximaTela(TelaInicial.class));
+        imagebutton_deposito_voltarpagar.setOnClickListener(evt -> proximaTela(Pagar.class));
 
         Spinner tipo_moedainicial = (Spinner) findViewById(R.id.spinner_Deposito_MoedaIncial);
         ArrayAdapter<CharSequence> adapter_moedainicial = ArrayAdapter.createFromResource(this, R.array.moedas,
@@ -91,7 +92,7 @@ public class Depositar extends AppCompatActivity {
         public void deposito_id(){
             button_deposito_concluirtransacao = findViewById(R.id.button_Deposito_ConcluirTransacao);
             button_depositar_confirmardados = findViewById(R.id.button_Depositar_ConfirmarDados);
-            clic_deposito_voltartelainicial = findViewById(R.id.imageButton_Depositar_VoltarInicial);
+            imagebutton_deposito_voltarpagar = findViewById(R.id.imageButton_Depositar_VoltarPagar);
             imagebutton_depositar_convertermoeda = findViewById(R.id.imageButton_Depositar_ConverterMoeda);
             edittxt_depositar_digitarvalor = findViewById(R.id.editText_Depositar_DigitarValor);
             edittxt_depositar_digitarrecebedor = findViewById(R.id.editText_Depositar_DigitarRecebedor);
@@ -100,7 +101,7 @@ public class Depositar extends AppCompatActivity {
             spinner_moedafinal = findViewById(R.id.spinner_Deposito_MoedaFinal);
             spinner_tipodeposito = findViewById(R.id.spinner_Depositar_TipoDeposito);
             txtv_depositar_valorfinal = findViewById(R.id.textView_Depositar_ValolFinal);
-            txtv_depositar_confirmarvalor = findViewById(R.id.editText_Depositar_ConfirmarValor);
+            edittxt_depositar_confirmarvalor = findViewById(R.id.editText_Depositar_ConfirmarValor);
             txtv_depositar_datatransacao = findViewById(R.id.textView_Depositar_DataTransacao);
             txtv_depositar_banco = findViewById(R.id.textView_Depositar_Banco);
             txtv_depositar_agenciaconta = findViewById(R.id.textView_Depositar_AgenciaConta);

@@ -18,6 +18,23 @@
     tools:context=".TelaInicial">
 
 
+    <Button
+        android:id="@+id/button_TelaInicial_Suporte"
+        android:layout_width="99dp"
+        android:layout_height="66dp"
+        android:backgroundTint="@color/white"
+        android:drawableTop="@drawable/ic_baseline_support_agent_24"
+        android:text="Suporte"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:drawableTint="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
     <ImageView
         android:id="@+id/logo2"
         android:layout_width="144dp"
@@ -149,34 +166,25 @@
             android:textSize="10dp"
             android:textStyle="bold" />
 
+
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/nav_Caixa_Navegacao"
-        android:layout_width="120dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toTopOf="@+id/logo2"
+    <Button
+        android:id="@+id/button_TelaInicial_Logoff"
+        android:layout_width="99dp"
+        android:layout_height="66dp"
+        android:backgroundTint="@color/white"
+        android:drawableTop="@drawable/ic_baseline_logout_24"
+        android:text="Logoff"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:drawableTint="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="0.926"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082">
-
-    </FrameLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_Botao_Navegacao"
-        android:layout_width="120dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toTopOf="@+id/logo2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082"
-        app:menu="@menu/botoes_menu" >
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        app:layout_constraintVertical_bias="0.024" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

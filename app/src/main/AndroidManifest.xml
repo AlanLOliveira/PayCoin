@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PayCoin">
         <activity
+            android:name=".Suporte"
+            android:exported="false" />
+        <activity
+            android:name=".Receber"
+            android:exported="false" />
+        <activity
             android:name=".DadosTransferencia"
             android:exported="false" />
         <activity
