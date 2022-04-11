@@ -20,29 +20,16 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.684" />
-
-    <ImageView
-        android:id="@+id/imageView_DadosTransacao_Digital"
-        android:layout_width="73dp"
-        android:layout_height="65dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton_DadosTransacao_VoltarTelaInicial"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_DadosPagamentos_Password"
-        app:layout_constraintVertical_bias="0.106"
-        app:srcCompat="@drawable/impressaodigital" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.854" />
 
     <EditText
         android:id="@+id/editText_DadosPagamentos_Password"
         android:layout_width="246dp"
         android:layout_height="38dp"
-
         android:drawableStart="@drawable/ic_lock"
-
         android:hint="Digite sua senha"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +37,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/autenticao"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.054" />
 
     <ImageButton
         android:id="@+id/imageButton_DadosTransacao_VoltarTelaInicial"
@@ -69,50 +56,38 @@
         android:id="@+id/autenticao"
         android:layout_width="160dp"
         android:layout_height="29dp"
-
         android:text="Autenticação"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_DadosTransacao_AutorizarPagamento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+        app:layout_constraintVertical_bias="0.116" />
 
     <TextView
         android:id="@+id/textView_DadosPagamento"
-        android:layout_width="408dp"
-        android:layout_height="32dp"
+        android:layout_width="402dp"
+        android:layout_height="29dp"
         android:text="Dados para pagamento"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView9"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="347dp"
-        android:layout_height="170dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView_DadosPagamentos_Logo"
-        app:layout_constraintVertical_bias="0.443"
-        app:srcCompat="@drawable/boleto" />
+        app:layout_constraintVertical_bias="0.94" />
 
     <ImageView
         android:id="@+id/imageView_DadosPagamentos_Logo"
         android:layout_width="wrap_content"
-        android:layout_height="137dp"
+        android:layout_height="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -128,13 +103,110 @@
         android:layout_height="wrap_content"
         android:text="Pay Coin"
         android:textAlignment="center"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintVertical_bias="0.173" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="411dp"
+        android:layout_height="265dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_DadosTransacao_Titulo"
+        app:layout_constraintVertical_bias="0.192">
+
+        <TextView
+            android:id="@+id/textView_DadosTransacao_Favorecido"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:paddingStart="6dp"
+            android:text="Favorecido"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_DadosTransacao_DadosFavorecido"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:paddingStart="6dp" />
+
+        <TextView
+            android:id="@+id/textView_DadosTransacao_Banco"
+            android:layout_width="135dp"
+            android:layout_height="25dp"
+            android:paddingStart="6dp"
+            android:text="Banco"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textView_DadosTransacao_DadosBanco"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:paddingStart="6dp" />
+
+        <TextView
+            android:id="@+id/textView_DadosTransacao_AgenciaConta"
+            android:layout_width="135dp"
+            android:layout_height="25dp"
+            android:paddingLeft="6dp"
+            android:text="Agência e Conta"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_DadosTransacao_DadosAgenciaConta"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:paddingStart="6dp" />
+
+        <TextView
+            android:id="@+id/textView_DadosTransacao_Valor"
+            android:layout_width="135dp"
+            android:layout_height="25dp"
+            android:paddingStart="6dp"
+            android:text="Valor"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_DadosTransacao_DadosValor"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:paddingStart="6dp" />
+
+        <TextView
+            android:id="@+id/textView_DadosTransacao_Vencimento"
+            android:layout_width="135dp"
+            android:layout_height="25dp"
+            android:paddingStart="6dp"
+            android:text="Vencimento"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_DadosTransacao_DadosVencimento"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:paddingStart="6dp" />
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

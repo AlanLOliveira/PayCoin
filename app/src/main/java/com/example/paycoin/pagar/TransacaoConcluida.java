@@ -12,7 +12,7 @@ import com.example.paycoin.TelaInicial;
 
 public class TransacaoConcluida extends AppCompatActivity {
 
-    Button clic_transacaoconcluida_telainicial;
+    Button button_transacaoconcluida_telainicial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +20,12 @@ public class TransacaoConcluida extends AppCompatActivity {
         setContentView(R.layout.activity_transacao_concluida);
         getSupportActionBar().hide();
 
-        clic_transacaoconcluida_telainicial = findViewById(R.id.button_TransacaoConcluida_TelaPrincipal);
-        clic_transacaoconcluida_telainicial.setOnClickListener(new View.OnClickListener() {
+        button_transacaoconcluida_telainicial = findViewById(R.id.button_TransacaoConcluida_TelaPrincipal);
+        button_transacaoconcluida_telainicial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent hom4 = new Intent(getApplicationContext(), TelaInicial.class);
-                startActivity(hom4);
+                Intent homeinicial = new Intent(getApplicationContext(), TelaInicial.class);
+                startActivity(homeinicial);
             }
         });
 

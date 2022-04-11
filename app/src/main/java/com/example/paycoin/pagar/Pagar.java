@@ -52,13 +52,7 @@ public class Pagar extends AppCompatActivity {
             }
         });
 
-        clic_escanear_qrcode = findViewById(R.id.button_Pagar_EscaneieQRCode);
-        clic_escanear_qrcode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) { Intent qrcod = new Intent(getApplicationContext(), QRCode.class);
-                startActivity(qrcod);
-            }
-        });
+
 
     }
 }

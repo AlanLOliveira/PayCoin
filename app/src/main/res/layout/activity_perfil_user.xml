@@ -36,11 +36,14 @@
         android:drawablePadding="6dp"
         android:ems="5"
         android:hint="Nome"
+        android:minHeight="48dp"
+        android:paddingTop="15dp"
         android:textColor="@color/black"
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/cinza_escuro"
         android:textColorLink="@color/purple_700"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView_perfil_Email"
@@ -52,11 +55,14 @@
         android:ems="5"
         android:hint="Email"
         android:inputType="textWebEmailAddress"
+        android:minHeight="48dp"
+        android:paddingTop="15dp"
         android:textColor="@color/black"
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/cinza_escuro"
         android:textColorLink="@color/purple_700"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView_perfil_Senha"
@@ -68,11 +74,14 @@
         android:ems="5"
         android:hint="Password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingTop="15dp"
         android:textColor="@color/black"
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/cinza_escuro"
         android:textColorLink="@color/purple_700"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
 
     <TextView
@@ -85,11 +94,14 @@
         android:ems="5"
         android:hint="CPF"
         android:inputType="number"
+        android:minHeight="48dp"
+        android:paddingTop="15dp"
         android:textColor="@color/black"
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/cinza_escuro"
         android:textColorLink="@color/purple_700"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView_perfil_DadosBancarios"
@@ -101,11 +113,14 @@
         android:ems="5"
         android:hint="Dados bancarios"
         android:inputType="none"
+        android:minHeight="48dp"
+        android:paddingTop="15dp"
         android:textColor="@color/black"
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/cinza_escuro"
         android:textColorLink="@color/purple_700"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView_perfil_ValorInicial"
@@ -117,15 +132,18 @@
         android:ems="5"
         android:hint="Valor Inicial"
         android:inputType="number"
+        android:minHeight="48dp"
+        android:paddingTop="15dp"
         android:textColor="@color/black"
         android:textColorHighlight="@color/purple_500"
         android:textColorHint="@color/cinza_escuro"
         android:textColorLink="@color/purple_700"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="346dp"
-        android:layout_height="52dp">
+        android:layout_width="349dp"
+        android:layout_height="162dp">
 
         <Button
             android:id="@+id/button_perfil_Sair"
@@ -136,9 +154,11 @@
             android:text="Sair"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_perfil_Editar"
-            app:layout_constraintStart_toEndOf="@+id/button_perfil_Salvar"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.59" />
 
         <Button
             android:id="@+id/button_perfil_Salvar"
@@ -150,24 +170,10 @@
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <Button
-            android:id="@+id/button_perfil_Editar"
-            android:layout_width="99dp"
-            android:layout_height="38dp"
-            android:backgroundTint="@color/cinza_escuro"
-            android:minHeight="48dp"
-            android:text="Editar"
-            android:textStyle="bold|italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.936"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.125" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

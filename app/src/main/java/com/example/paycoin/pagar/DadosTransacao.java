@@ -8,14 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.paycoin.R;
 
 public class DadosTransacao extends AppCompatActivity {
 
-    ImageButton clic_dadostransacao_voltartelainicial;
-    Button clic_dadostransacao_codbarras;
-    ImageView clic_dadostransacao_digital;
+    ImageButton imagebutton_dadostransacao_voltartelainicial;
+    Button button_dadostransacao_codbarras;
+    TextView textview_dadostransacao_dadosfavorecido;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,18 +26,21 @@ public class DadosTransacao extends AppCompatActivity {
         setContentView(R.layout.activity_dados_transacao);
         getSupportActionBar().hide();
 
-        clic_dadostransacao_codbarras = findViewById(R.id.button_DadosTransacao_AutorizarPagamento);
-        clic_dadostransacao_voltartelainicial = findViewById(R.id.imageButton_DadosTransacao_VoltarTelaInicial);
-        clic_dadostransacao_digital = findViewById(R.id.imageView_DadosTransacao_Digital);
 
-        clic_dadostransacao_codbarras.setOnClickListener(new View.OnClickListener() {
+
+        textview_dadostransacao_dadosfavorecido = findViewById(R.id.textView_DadosTransacao_DadosFavorecido);
+        button_dadostransacao_codbarras = findViewById(R.id.button_DadosTransacao_AutorizarPagamento);
+        imagebutton_dadostransacao_voltartelainicial = findViewById(R.id.imageButton_DadosTransacao_VoltarTelaInicial);
+
+
+        button_dadostransacao_codbarras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent autoriz = new Intent(getApplicationContext(), TransacaoConcluida.class);
                 startActivity(autoriz);
             }
         });
-        clic_dadostransacao_voltartelainicial.setOnClickListener(new View.OnClickListener() {
+        imagebutton_dadostransacao_voltartelainicial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
               Intent volt3 = new Intent(getApplicationContext(), CodBarras.class);
@@ -42,13 +48,6 @@ public class DadosTransacao extends AppCompatActivity {
             }
         });
 
-        clic_dadostransacao_digital.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent autoriz07 = new Intent(getApplicationContext(), TransacaoConcluida.class);
-                startActivity(autoriz07);
-            }
-        });
 
     }
 }

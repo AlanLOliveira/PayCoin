@@ -31,23 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_Pagar_EscaneieQRCode"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="?attr/actionModeCloseDrawable" />
-
-    <Button
-        android:id="@+id/button_Pagar_EscaneieQRCode"
-        android:layout_width="281dp"
-        android:layout_height="58dp"
-        android:backgroundTint="#cacaca"
-        android:drawableLeft="@drawable/qrcode"
-        android:text="Escaneie o QR Code"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_Pagar_DigiteCodigoBarras"
-        app:layout_constraintVertical_bias="0.119" />
 
     <Button
         android:id="@+id/button_Pagar_DepositosTransferencia"
@@ -61,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_Pagar_Logo"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintVertical_bias="0.371" />
 
     <Button
         android:id="@+id/button_Pagar_DigiteCodigoBarras"
@@ -75,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_Pagar_DepositosTransferencia"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintVertical_bias="0.182" />
 
     <ImageView
         android:id="@+id/imageView_Pagar_Logo"

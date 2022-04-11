@@ -12,7 +12,7 @@ import com.example.paycoin.database.BancoSQLite;
 import com.example.paycoin.models.Usuario;
 
 public class PerfilUser extends AppCompatActivity {
-    Button clic_perfil_salvar, clic_perfil_sair, clic_perfil_editar;
+    Button clic_perfil_salvar, clic_perfil_sair;
     TextView txtv_perfil_nome, txtv_perfil_email, txtv_perfil_senha,
             txtv_perfil_cpf, txtv_perfil_contabancaria, txtv_perfil_valorinicial;
 
@@ -24,7 +24,6 @@ public class PerfilUser extends AppCompatActivity {
             id_perfil();
 
         clic_perfil_salvar = findViewById(R.id.button_perfil_Salvar);
-        clic_perfil_editar = findViewById(R.id.button_perfil_Editar);
         clic_perfil_sair = findViewById(R.id.button_perfil_Sair);
 
 
@@ -51,7 +50,6 @@ public class PerfilUser extends AppCompatActivity {
 
    public void id_perfil(){
        clic_perfil_salvar = findViewById(R.id.button_perfil_Salvar);
-       clic_perfil_editar = findViewById(R.id.button_perfil_Editar);
        clic_perfil_sair = findViewById(R.id.button_perfil_Sair);
        txtv_perfil_nome = findViewById(R.id.textView_perfil_Nome);
        txtv_perfil_email = findViewById(R.id.textView_perfil_Email);

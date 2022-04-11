@@ -10,6 +10,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.paycoin.R;
@@ -19,10 +20,13 @@ import com.example.paycoin.models.Usuario;
 
 public class CadastroUser extends AppCompatActivity {
 
-    Button clic_cadastraruser_salvar, clic_cadastraruser_cancelar, clic_cadastraruser_editar;
+    Button clic_cadastraruser_salvar, clic_cadastraruser_cancelar;
     EditText edit_cadastraruser_nome, edit_cadastraruser_email, edit_cadastraruser_valorinicial,
             edit_cadastraruser_senha, edit_cadastraruser_contabancaria,
             edit_cadastraruser_cpf;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +81,7 @@ public class CadastroUser extends AppCompatActivity {
 
     }
     public void ids_cadastro() {
-        clic_cadastraruser_editar = findViewById(R.id.button_CadastrarUser_Editar);
+
         clic_cadastraruser_salvar = findViewById(R.id.button_CadastrarUser_Salvar);
         clic_cadastraruser_cancelar = findViewById(R.id.button_CadastrarUser_Cancelar);
         edit_cadastraruser_nome = findViewById(R.id.edittext_CadastrarUser_Nome);
@@ -86,6 +90,7 @@ public class CadastroUser extends AppCompatActivity {
         edit_cadastraruser_contabancaria = findViewById(R.id.editText_CadastrarUser_ContaBancaria);
         edit_cadastraruser_cpf = findViewById(R.id.editText_CadastrarUser_CPF);
         edit_cadastraruser_valorinicial = findViewById(R.id.editText_CadastrarUser_ValorInicial);
+
     }
 
 

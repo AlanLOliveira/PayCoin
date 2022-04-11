@@ -129,17 +129,6 @@
         android:textColorLink="@color/purple_700" />
 
     <Button
-        android:id="@+id/button_CadastrarUser_Editar"
-        android:layout_width="104dp"
-        android:layout_height="38dp"
-        android:layout_marginLeft="120dp"
-        android:backgroundTint="@color/cinza_escuro"
-        android:minHeight="48dp"
-        android:text="Editar"
-        android:textColor="@color/white"
-        android:textStyle="bold|italic" />
-
-    <Button
         android:id="@+id/button_CadastrarUser_Salvar"
         android:layout_width="104dp"
         android:layout_height="38dp"

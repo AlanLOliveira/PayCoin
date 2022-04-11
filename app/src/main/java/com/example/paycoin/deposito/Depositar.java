@@ -3,11 +3,8 @@ package com.example.paycoin.deposito;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,19 +17,17 @@ import android.widget.Toast;
 import com.example.paycoin.DadosTransferencia;
 import com.example.paycoin.R;
 import com.example.paycoin.TelaInicial;
-import com.example.paycoin.database.BancoSQLite;
-import com.example.paycoin.models.Usuario;
-import com.example.paycoin.pagar.DadosTransacao;
-
-import java.lang.reflect.Array;
+import com.example.paycoin.pagar.TransacaoConcluida;
 
 public class Depositar extends AppCompatActivity {
 
-    ImageButton clic_deposito_convertermoeda,clic_deposito_voltartelainicial;
-    Button clic_deposito_concluirtransacao;
+    ImageButton imagebutton_depositar_convertermoeda,clic_deposito_voltartelainicial;
+    Button button_deposito_concluirtransacao, button_depositar_confirmardados;
     EditText edittxt_depositar_digitarrecebedor, edittxt_depositar_digitarvalor;
     Spinner spinner_bancoorigem, spinner_tipodeposito, spinner_moedainicial, spinner_moedafinal;
-    TextView txtv_depositar_valorfinal;
+    TextView txtv_depositar_valorfinal, txtv_depositar_recebedor,txtv_depositar_banco,
+            txtv_depositar_agenciaconta, txtv_depositar_confirmarvalor,
+            txtv_depositar_datatransacao, txtv_depositar_tipodeposito;
 
 
 
@@ -46,42 +41,44 @@ public class Depositar extends AppCompatActivity {
         deposito_id();
 
 
-       clic_deposito_convertermoeda.setOnClickListener(new View.OnClickListener() {
+       imagebutton_depositar_convertermoeda.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                Resultado();
            }
        });
 
-
+       button_depositar_confirmardados.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               dadosTransacoes();
+           }
+       });
 
 
         clic_deposito_voltartelainicial.setOnClickListener(evt -> proximaTela(TelaInicial.class));
-        clic_deposito_concluirtransacao.setOnClickListener(evt -> proximaTela(DadosTransferencia.class));
-
-
 
         Spinner tipo_moedainicial = (Spinner) findViewById(R.id.spinner_Deposito_MoedaIncial);
-        ArrayAdapter adapter_moedainicial = ArrayAdapter.createFromResource(this, R.array.moedas,
+        ArrayAdapter<CharSequence> adapter_moedainicial = ArrayAdapter.createFromResource(this, R.array.moedas,
                 R.layout.spinner_estilo);
         adapter_moedainicial.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         tipo_moedainicial.setAdapter(adapter_moedainicial);
 
         Spinner tipo_moedafinal = (Spinner) findViewById(R.id.spinner_Deposito_MoedaFinal);
-        ArrayAdapter adapter_moedafinal = ArrayAdapter.createFromResource(this, R.array.moedas,
+        ArrayAdapter<CharSequence> adapter_moedafinal = ArrayAdapter.createFromResource(this, R.array.moedas,
                 R.layout.spinner_estilo);
         adapter_moedafinal.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         tipo_moedafinal.setAdapter(adapter_moedafinal);
 
 
         Spinner selecao_bancoinicial = (Spinner) findViewById(R.id.spinner_Deposito_BancoOrigem);
-        ArrayAdapter adapter_bancoinicial = ArrayAdapter.createFromResource(this, R.array.Bancos, R.layout.spinner_estilo);
+        ArrayAdapter<CharSequence> adapter_bancoinicial = ArrayAdapter.createFromResource(this, R.array.Bancos, R.layout.spinner_estilo);
         adapter_bancoinicial.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         selecao_bancoinicial.setAdapter(adapter_bancoinicial);
 
 
         Spinner selecao_tipodeposito = (Spinner) findViewById(R.id.spinner_Depositar_TipoDeposito);
-        ArrayAdapter adapter_depositoinicial = ArrayAdapter.createFromResource(this, R.array.Formas_de_depositos, R.layout.spinner_estilo);
+        ArrayAdapter<CharSequence> adapter_depositoinicial = ArrayAdapter.createFromResource(this, R.array.Formas_de_depositos, R.layout.spinner_estilo);
         adapter_depositoinicial.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         selecao_tipodeposito.setAdapter(adapter_depositoinicial);
 
@@ -92,16 +89,25 @@ public class Depositar extends AppCompatActivity {
         startActivity(proximatela);
         }
         public void deposito_id(){
-            clic_deposito_concluirtransacao = findViewById(R.id.button_Deposito_ConcluirTransacao);
+            button_deposito_concluirtransacao = findViewById(R.id.button_Deposito_ConcluirTransacao);
+            button_depositar_confirmardados = findViewById(R.id.button_Depositar_ConfirmarDados);
             clic_deposito_voltartelainicial = findViewById(R.id.imageButton_Depositar_VoltarInicial);
-            clic_deposito_convertermoeda = findViewById(R.id.imageButton_Depositar_ConverterMoeda);
+            imagebutton_depositar_convertermoeda = findViewById(R.id.imageButton_Depositar_ConverterMoeda);
             edittxt_depositar_digitarvalor = findViewById(R.id.editText_Depositar_DigitarValor);
             edittxt_depositar_digitarrecebedor = findViewById(R.id.editText_Depositar_DigitarRecebedor);
             spinner_bancoorigem = findViewById(R.id.spinner_Deposito_BancoOrigem);
             spinner_moedainicial = findViewById(R.id.spinner_Deposito_MoedaIncial);
             spinner_moedafinal = findViewById(R.id.spinner_Deposito_MoedaFinal);
             spinner_tipodeposito = findViewById(R.id.spinner_Depositar_TipoDeposito);
-            txtv_depositar_valorfinal = findViewById(R.id.textView_Deposito_ValolFinal);
+            txtv_depositar_valorfinal = findViewById(R.id.textView_Depositar_ValolFinal);
+            txtv_depositar_confirmarvalor = findViewById(R.id.editText_Depositar_ConfirmarValor);
+            txtv_depositar_datatransacao = findViewById(R.id.textView_Depositar_DataTransacao);
+            txtv_depositar_banco = findViewById(R.id.textView_Depositar_Banco);
+            txtv_depositar_agenciaconta = findViewById(R.id.textView_Depositar_AgenciaConta);
+            txtv_depositar_recebedor = findViewById(R.id.textView_Depositar_Recebedor);
+            txtv_depositar_tipodeposito = findViewById(R.id.textView_Depositar_TipoDeposito);
+
+
         }
     public void Resultado () {
 
@@ -200,10 +206,51 @@ public class Depositar extends AppCompatActivity {
         else {
             Toast.makeText(this, " Selecione novamente", Toast.LENGTH_LONG).show();
         }
+        button_deposito_concluirtransacao.setOnClickListener(evt -> proximaTela(TransacaoConcluida.class));
+
     }
+    public void dadosTransacoes(){
+        String selecionar_tipodepositoa = spinner_tipodeposito.getSelectedItem().toString();
+
+
+        if (selecionar_tipodepositoa.equals("Pix")){
+
+            txtv_depositar_recebedor.setText("Kelly");
+            txtv_depositar_banco.setText("Banco Itaú S.A");
+            txtv_depositar_agenciaconta.setText("1001/1234-5");
+            txtv_depositar_tipodeposito.setText(selecionar_tipodepositoa);
+            txtv_depositar_datatransacao.setText("11/04/2022");
+            Toast.makeText(this, " Confirme osdados para pagamento e Digite sua senha", Toast.LENGTH_LONG).show();
+
+
+        }else if (selecionar_tipodepositoa.equals("Ted")) {
+            txtv_depositar_tipodeposito.setText(selecionar_tipodepositoa);
+            txtv_depositar_recebedor.setText("Alexssander");
+            txtv_depositar_banco.setText("Banco Bradesco S.A");
+            txtv_depositar_agenciaconta.setText("1234/1234-5");
+            txtv_depositar_datatransacao.setText("11/04/2022");
+            Toast.makeText(this, " Confirme osdados para pagamento e Digite sua senha", Toast.LENGTH_LONG).show();
+
+        }else if (selecionar_tipodepositoa.equals("Doc")){
+            txtv_depositar_tipodeposito.setText(selecionar_tipodepositoa);
+            txtv_depositar_recebedor.setText("Andre");
+            txtv_depositar_banco.setText("Banco Santander S.A");
+            txtv_depositar_agenciaconta.setText("1235/1234-5");
+            txtv_depositar_datatransacao.setText("11/04/2022");
+            Toast.makeText(this, " Confirme osdados para pagamento e Digite sua senha", Toast.LENGTH_LONG).show();
+
+        }else
+        {
+            Toast.makeText(this, " Código de Barras Inválido", Toast.LENGTH_LONG).show();
+        }
 
 
     }
+
+}
+
+
+
 
 
 
